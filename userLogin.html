@@ -1,0 +1,84 @@
+<?php
+session_start();
+?>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User Login</title>
+	<link rel="icon" type="image/png" href="img/i4c.png">
+
+<!-- Materialize CSS -->
+	<link rel="stylesheet" type="text/css" href="css/materialize/materialize.min.css"> 
+<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<!-- Bootstrap css -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.css">
+<!-- vanilla css -->
+	<link rel="stylesheet" type="text/css" href="css/userLoginstyle.css">
+	<script type="text/javascript" src="js/script.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<!-- Wrapper -->
+	<div class="wrapper" id="box"> 
+		<!-- Sidebar -->
+				
+			  <span class="open-slide">
+				<a href="#" onclick="openSlideMenu()">
+				  <svg width ="30" height ="30">
+					<path d="M0,5 30,5" stroke="#000" stroke-width="5"/>
+					<path d="M0,14 30,14" stroke="#000" stroke-width="5"/>
+					<path d="M0,23 30,23" stroke="#000" stroke-width="5"/>
+				   </svg>
+				</a>
+			  </span> 
+				 <div id="side-menu" class="side-nav">
+					<a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+					<a href="index.html">Home</a>
+					<a href="about.html">About</a>
+	      	<a href="adminLogin.html">Admin Login</a>
+	      	<a href="subadminLogin.html">Sub-Admin Login</a>
+	      	<a href="userSignup.html">User Signup</a>
+	      	<a href="userLogin.html">User Login</a>
+
+				</div>
+		
+	<section class="container-fluid">
+		<section class="row justify-content-center">
+			<section class="col-12 col-sm-6 col-md-3">
+				<img src="img/user.png" class="bg">
+				<form class="form-container" action="php/user_login.php" method="POST" name="LoginForm">
+						<h2 class="text-center font-weight-bold">User Login</h2>
+						<div class="form-group">
+					    <input type="text" class="form-control" id="vid" aria-describedby="emailHelp" placeholder="Victim ID" name="vid">
+					    </div>
+			  			<div class="form-group">
+					    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username" name="uname">
+					    </div>
+					 	<div class="form-group">
+						<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="pass">
+						</div>
+					<button type="submit" class="btn btn-primary btn-block" name="submit" onclick="return valid_login()">Login</button>
+				</form>
+				
+			</section>
+		</section>
+		
+	</section>
+
+	<div class="text-center">New Here?  <a href="userSignup.php" style="color: red;">Sign up</a></div>
+	<p class="my-5 text-center">For demo purpose - <br>
+				User uid is: dmhha<br>
+				SubAdmin Username is : dmhha <br>
+				SubAdmin Password is: dmhha</p>
+	<div class="fixed-action-btn">
+    	<a href="index.html" class="btn-floating waves-effect waves-red red white-text btn-large pulse">Home</a>
+ 	</div>
+<!-- Bootstrap js -->
+	<script type="text/javascript" src="js/bootstrap/bootstrap.js"></script>
+	<!-- Materialize js -->
+  	<script type="text/javascript" src="js/materialize/materialize.min.js"></script>
+  	<!-- Form Validation js -->
+  <script type="text/javascript" src="./js/login_form_valid.js"></script>
+</body>
+</html>
